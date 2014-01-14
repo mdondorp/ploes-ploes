@@ -23,6 +23,8 @@ public class Wegwerkzaamheid {
     /**
      */
     private Boolean afsluiting;
+    
+    //TODO create association with WerkzaamhedenFacade.
 
     /**
      */

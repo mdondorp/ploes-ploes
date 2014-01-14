@@ -17,7 +17,7 @@ public class WerkzaamhedenFacade implements IWerkzaamhedenRepository{
 	/**
 	 * Find and return list of Wegwerkzaamheden.
 	 * 
-	 * @return a list of Werkzaamheden
+	 * @return list of Werkzaamheden
 	 */
 	
 	public List<Wegwerkzaamheid> geefWerkzaamheden(){
