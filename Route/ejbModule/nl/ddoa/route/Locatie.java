@@ -4,13 +4,18 @@ package nl.ddoa.route;
  * @author eddie
  *
  */
-public class Locatie {
+class Locatie {
 	private double breedtegraad;
 	private double lengtegraad;
 	
 	
 	public Locatie(){
 		
+	}
+	
+	public Locatie(double breedtegraad, double lengtegraad){
+		this.breedtegraad = breedtegraad;
+		this.lengtegraad = lengtegraad;
 	}
 	
 	/* (non-Javadoc)

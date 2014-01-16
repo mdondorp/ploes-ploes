@@ -8,11 +8,15 @@ package nl.ddoa.route;
  * @author eddie
  *
  */
-public class Afslag {
+class Afslag {
 	private Locatie locatie;
 
 	public Afslag(){
 		
+	}
+	
+	public Afslag(Locatie locatie){
+		this.locatie = locatie;
 	}
 	
 	public Afslag(double breedtegraad, double lengtegraad){

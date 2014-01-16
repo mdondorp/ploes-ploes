@@ -3,7 +3,8 @@
  */
 package nl.ddoa.route;
 
-import java.util.List;
+
+import java.util.ArrayList;
 
 import javax.ejb.Stateless;
 
@@ -17,6 +18,7 @@ public class Route  {
 	
 	private Locatie beginpunt;
 	private Locatie eindpunt;
+	private ArrayList<RouteSegment> wegSegmenten = new ArrayList<RouteSegment>();
 
 	/**
 	 * default constructor
@@ -25,6 +27,8 @@ public class Route  {
 		
 	}
 
+	
+	
 
 	/* (non-Javadoc)
 	 * @see nl.ddoa.route.IRoute#setBeginPunt(nl.ddoa.route.Locatie)
@@ -33,7 +37,20 @@ public class Route  {
 		this.setBeginpunt(beginPunt);
 		
 	}
-
+	
+	public void setBeginEnEindPunt(double beginBreedtegraad, double beginLengtegraad, double eindBreedtegraad, double eindLengtegraad){
+		Locatie beginLocatie = new Locatie();
+		beginLocatie.setBreedtegraad(beginBreedtegraad);
+		beginLocatie.setLengtegraad(beginLengtegraad);
+		
+		this.setBeginpunt(beginLocatie);
+		
+		Locatie eindLocatie = new Locatie();
+		eindLocatie.setBreedtegraad(eindBreedtegraad);
+		eindLocatie.setLengtegraad(eindLengtegraad);
+		this.setEindPunt(eindLocatie);
+	}
+	
 	/* (non-Javadoc)
 	 * @see nl.ddoa.route.IRoute#setEindPunt(nl.ddoa.route.Locatie)
 	 */
@@ -58,7 +75,6 @@ public class Route  {
 	}
 
 
-
 	/* (non-Javadoc)
 	 * @see nl.ddoa.route.IRoute#getBeginpunt()
 	 */
@@ -79,5 +95,19 @@ public class Route  {
 
 	public void setEindpunt(Locatie eindpunt) {
 		this.eindpunt = eindpunt;
+	}
+
+
+
+
+	public ArrayList<RouteSegment> getWegSegmenten() {
+		return wegSegmenten;
+	}
+
+
+
+
+	public void setWegSegmenten(ArrayList<RouteSegment> wegSegmenten) {
+		this.wegSegmenten = wegSegmenten;
 	}
 }

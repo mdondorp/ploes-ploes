@@ -5,4 +5,4 @@
  * @author eddie
  *
  */
-package nl.ddoa.werkzaamheid;
+package nl.ddoa.ejb;

@@ -1,17 +1,21 @@
-package nl.ddoa.route;
+package nl.ddoa.ejb;
+
+import java.util.ArrayList;
 
 import javax.ejb.Local;
+
+import nl.ddoa.route.Route;
+import nl.ddoa.route.RouteSegment;
+
 
 
 
 @Local
 public interface RouteEJBLocal {
-	Locatie getLocatie(double breedtegraad, double lengtegraad);
-	Afslag getAfslag(double breedtegraad, double lengtegraad);
-	RouteSegment getRouteSegment();
-	
+
 	Route getRoute(double beginBreedtegraad, double beginLengtegraad,
 			double eindBreedtegraad, double eindLengtegraad);
+	ArrayList<RouteSegment> getSegmenten();
 }
 
 
