@@ -11,3 +11,4 @@ field date --fieldName vanDatum --type java.util.Calendar --dateTimeFormatPatter
 field date --fieldName totDatum --type java.util.Calendar --dateTimeFormatPattern "yyyy-MM-dd hh:mm:ss"
 web mvc setup
 web mvc all --package ~.web
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2014-01-16 13:57:32
