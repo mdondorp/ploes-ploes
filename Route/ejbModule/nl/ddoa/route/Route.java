@@ -5,11 +5,15 @@ package nl.ddoa.route;
 
 import java.util.List;
 
+import javax.ejb.Stateless;
+
 /**
  * @author eddie
  *
  */
-public class Route {
+
+@Stateless
+public class Route  {
 	
 	private Locatie beginpunt;
 	private Locatie eindpunt;
@@ -22,16 +26,27 @@ public class Route {
 	}
 
 
+	/* (non-Javadoc)
+	 * @see nl.ddoa.route.IRoute#setBeginPunt(nl.ddoa.route.Locatie)
+	 */
 	public void setBeginPunt(Locatie beginPunt) {
 		this.setBeginpunt(beginPunt);
 		
 	}
+
+	/* (non-Javadoc)
+	 * @see nl.ddoa.route.IRoute#setEindPunt(nl.ddoa.route.Locatie)
+	 */
 
 	public void setEindPunt(Locatie eindPunt) {
 		this.setEindpunt(eindPunt);
 		
 	}
 
+
+	/* (non-Javadoc)
+	 * @see nl.ddoa.route.IRoute#getRoute(nl.ddoa.route.Locatie, nl.ddoa.route.Locatie)
+	 */
 
 	public Route getRoute(Locatie beginpunt, Locatie eindpunt) {
 		// TODO Auto-generated method stub
@@ -43,35 +58,25 @@ public class Route {
 	}
 
 
-	public List<IWerkzaamheid> getWerkzaamheden(List<RouteSegment> segmenten) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
-	/**
-	 * @return the beginpunt
+	/* (non-Javadoc)
+	 * @see nl.ddoa.route.IRoute#getBeginpunt()
 	 */
+
 	public Locatie getBeginpunt() {
 		return beginpunt;
 	}
 
-	/**
-	 * @param beginpunt the beginpunt to set
-	 */
+
 	public void setBeginpunt(Locatie beginpunt) {
 		this.beginpunt = beginpunt;
 	}
 
-	/**
-	 * @return the eindpunt
-	 */
 	public Locatie getEindpunt() {
 		return eindpunt;
 	}
 
-	/**
-	 * @param eindpunt the eindpunt to set
-	 */
+
 	public void setEindpunt(Locatie eindpunt) {
 		this.eindpunt = eindpunt;
 	}
