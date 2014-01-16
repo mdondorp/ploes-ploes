@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_nl_ica_ddoa_dda_routeplanner_domain_Wegwerkzaamheid" items="${wegwerkzaamheids}" z="AVqzUWlLRNJFYV9ur1i3PqjyybM=">
+        <table:table data="${wegwerkzaamheids}" id="l_nl_ica_ddoa_dda_routeplanner_domain_Wegwerkzaamheid" path="/wegwerkzaamheids" z="3vzrkpmERGG9Ya4ZTv4QlluG7L8=">
+            <table:column id="c_nl_ica_ddoa_dda_routeplanner_domain_Wegwerkzaamheid_omschrijving" property="omschrijving" z="n2ApIcxa/2exmrta8KzKK9Gwmc8="/>
+            <table:column id="c_nl_ica_ddoa_dda_routeplanner_domain_Wegwerkzaamheid_vertraging" property="vertraging" z="T5fzcfPw2mfq6kQcww1x1NOwPHQ="/>
+            <table:column id="c_nl_ica_ddoa_dda_routeplanner_domain_Wegwerkzaamheid_afsluiting" property="afsluiting" z="xCE70fd//ArWWyw7CouJkdIlCBg="/>
+            <table:column calendar="true" dateTimePattern="${wegwerkzaamheid_vandatum_date_format}" id="c_nl_ica_ddoa_dda_routeplanner_domain_Wegwerkzaamheid_vanDatum" property="vanDatum" z="d6jg0HAeljLsWz2cNvKdCbbA07I="/>
+            <table:column calendar="true" dateTimePattern="${wegwerkzaamheid_totdatum_date_format}" id="c_nl_ica_ddoa_dda_routeplanner_domain_Wegwerkzaamheid_totDatum" property="totDatum" z="hjs1LAJldKk0bIA2PwaNO0iOmcw="/>
+        </table:table>
+    </page:list>
+</div>

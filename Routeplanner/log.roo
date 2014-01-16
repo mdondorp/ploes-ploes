@@ -1,0 +1,14 @@
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2014-01-14 20:30:06
+project --topLevelPackage nl.ica.ddoa.dda.routeplanner --projectName Routeplanner --java 6 --packaging JAR
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log closed at 2014-01-14 20:30:07
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2014-01-14 20:30:14
+persistence setup --provider HIBERNATE --database MYSQL
+entity jpa --class ~.domain.Wegwerkzaamheid --testAutomatically
+field string --fieldName omschrijving
+field number --fieldName vertraging --type int
+field boolean --fieldName afsluiting
+field date --fieldName vanDatum --type java.util.Calendar --dateTimeFormatPattern "yyyy-MM-dd hh:mm:ss"
+field date --fieldName totDatum --type java.util.Calendar --dateTimeFormatPattern "yyyy-MM-dd hh:mm:ss"
+web mvc setup
+web mvc all --package ~.web
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2014-01-16 13:57:32
