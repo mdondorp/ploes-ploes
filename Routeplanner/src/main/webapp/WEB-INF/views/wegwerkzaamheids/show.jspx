@@ -6,8 +6,8 @@
         <field:display field="omschrijving" id="s_nl_ica_ddoa_dda_routeplanner_domain_Wegwerkzaamheid_omschrijving" object="${wegwerkzaamheid}" z="FRymvZzMo9U0Djo6kfwPquxn7OQ="/>
         <field:display field="vertraging" id="s_nl_ica_ddoa_dda_routeplanner_domain_Wegwerkzaamheid_vertraging" object="${wegwerkzaamheid}" z="58CVdOd6wbbsxTibE0cDeQnSCiE="/>
         <field:display field="afsluiting" id="s_nl_ica_ddoa_dda_routeplanner_domain_Wegwerkzaamheid_afsluiting" object="${wegwerkzaamheid}" z="pSNrFHIsBj6i8tIrdoT+FCWi4CU="/>
-        <field:display calendar="true" dateTimePattern="${wegwerkzaamheid_vandatum_date_format}" field="vanDatum" id="s_nl_ica_ddoa_dda_routeplanner_domain_Wegwerkzaamheid_vanDatum" object="${wegwerkzaamheid}" z="1opmaxFlPDMSIEr+fPWZSij5nyw="/>
-        <field:display calendar="true" dateTimePattern="${wegwerkzaamheid_totdatum_date_format}" field="totDatum" id="s_nl_ica_ddoa_dda_routeplanner_domain_Wegwerkzaamheid_totDatum" object="${wegwerkzaamheid}" z="rrAWkqaNM4yxNtqeZ9/9qxLqkIE="/>
         <field:display field="segmenten" id="s_nl_ica_ddoa_dda_routeplanner_domain_Wegwerkzaamheid_segmenten" object="${wegwerkzaamheid}" z="QZ2WlFNAlBEd+D2O6wdraTjh2LI="/>
+        <field:display date="true" dateTimePattern="${wegwerkzaamheid_vandatum_date_format}" field="vanDatum" id="s_nl_ica_ddoa_dda_routeplanner_domain_Wegwerkzaamheid_vanDatum" object="${wegwerkzaamheid}" z="KBPzuLSUr6zKf49Ur9Ibgrz42X8="/>
+        <field:display date="true" dateTimePattern="${wegwerkzaamheid_totdatum_date_format}" field="totDatum" id="s_nl_ica_ddoa_dda_routeplanner_domain_Wegwerkzaamheid_totDatum" object="${wegwerkzaamheid}" z="wfxSJ+VgfYPRWgQ7vcROimC+WI0="/>
     </page:show>
 </div>

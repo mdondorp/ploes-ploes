@@ -66,3 +66,22 @@ finder add --finderName findSegmentsByBeginPuntAndEindPunt
 web mvc finder all
 json all --deepSerialize
 web mvc json all
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log closed at 2014-01-18 21:37:42
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2014-01-18 21:44:37
+json all --deepSerialize
+
+web mvc json all
+
+focus --class ~.domain.Wegwerkzaamheid
+// [failed] field date --fieldName vanDatum --type java.util.Calendar --dateTimeFormatPattern "yyyy-MM-dd hh:mm:ss"
+
+focus --class ~.domain.Wegwerkzaamheid
+field date --fieldName vanDatum --type java.util.Clendar --dateTimeFormatPattern "yyyy-MM-dd hh:mm:ss"
+
+field date --fieldName vanDatum --type java.util.Date --dateTimeFormatPattern "yyyy-MM-dd hh:mm:ss"
+
+field date --fieldName totDatum --type java.util.Date --dateTimeFormatPattern "yyyy-MM-dd hh:mm:ss"
+
+json all --deepSerialize
+web mvc json all
+
