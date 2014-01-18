@@ -12,3 +12,76 @@ field date --fieldName totDatum --type java.util.Calendar --dateTimeFormatPatter
 web mvc setup
 web mvc all --package ~.web
 // Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2014-01-16 13:57:32
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2014-01-18 14:52:33
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log closed at 2014-01-18 17:39:16
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2014-01-18 17:41:15
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log closed at 2014-01-18 19:44:17
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2014-01-18 19:45:54
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log closed at 2014-01-18 19:49:54
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2014-01-18 19:51:32
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log closed at 2014-01-18 19:53:14
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2014-01-18 19:58:40
+hint
+help
+json all --deepSerialize
+hint
+help
+web mvc json all
+entity jpa --class ~.domain.Segment --testAutomatically
+field number --fieldName beginPunt --type double
+
+field number --fieldName eindPunt --type double
+field number --fieldName beginAfslag --type double
+
+field number --fieldName eindAfslag --type double
+
+focus --class ~.domain.Wegwerkzaamheid
+
+field list --fieldName segmenten --type ~.domain.Segment 
+
+web mvc all --package ~.web
+
+focus --class ~.domain.Wegwerkzaamheid
+
+finder add --finderName findWegwerkzaamheidsBySegmenten
+
+web mvc finder all 
+
+focus --class ~.domain.Segment
+
+finder add --finderName findSegmentsByBeginAfslagOrEindAfslag
+
+web mvc finder all
+
+focus --class ~.domain.Segment
+
+finder add --finderName findSegmentsByBeginPuntAndEindPunt
+
+web mvc all --package ~.web
+
+focus --class ~.domain.Segment
+
+finder add --finderName findSegmentsByBeginPuntAndEindPunt
+
+web mvc finder all
+json all --deepSerialize
+web mvc json all
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log closed at 2014-01-18 21:37:42
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2014-01-18 21:44:37
+json all --deepSerialize
+
+web mvc json all
+
+focus --class ~.domain.Wegwerkzaamheid
+// [failed] field date --fieldName vanDatum --type java.util.Calendar --dateTimeFormatPattern "yyyy-MM-dd hh:mm:ss"
+
+focus --class ~.domain.Wegwerkzaamheid
+field date --fieldName vanDatum --type java.util.Clendar --dateTimeFormatPattern "yyyy-MM-dd hh:mm:ss"
+
+field date --fieldName vanDatum --type java.util.Date --dateTimeFormatPattern "yyyy-MM-dd hh:mm:ss"
+
+field date --fieldName totDatum --type java.util.Date --dateTimeFormatPattern "yyyy-MM-dd hh:mm:ss"
+
+json all --deepSerialize
+web mvc json all
+

@@ -3,6 +3,7 @@
 
 package nl.ica.ddoa.dda.routeplanner.web;
 
+import nl.ica.ddoa.dda.routeplanner.domain.Segment;
 import nl.ica.ddoa.dda.routeplanner.domain.Wegwerkzaamheid;
 import nl.ica.ddoa.dda.routeplanner.web.ApplicationConversionServiceFactoryBean;
 import org.springframework.beans.factory.annotation.Configurable;
@@ -12,6 +13,30 @@ import org.springframework.format.FormatterRegistry;
 privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService {
     
     declare @type: ApplicationConversionServiceFactoryBean: @Configurable;
+    
+    public Converter<Segment, String> ApplicationConversionServiceFactoryBean.getSegmentToStringConverter() {
+        return new org.springframework.core.convert.converter.Converter<nl.ica.ddoa.dda.routeplanner.domain.Segment, java.lang.String>() {
+            public String convert(Segment segment) {
+                return new StringBuilder().append(segment.getBeginPunt()).append(' ').append(segment.getEindPunt()).append(' ').append(segment.getBeginAfslag()).append(' ').append(segment.getEindAfslag()).toString();
+            }
+        };
+    }
+    
+    public Converter<Long, Segment> ApplicationConversionServiceFactoryBean.getIdToSegmentConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.Long, nl.ica.ddoa.dda.routeplanner.domain.Segment>() {
+            public nl.ica.ddoa.dda.routeplanner.domain.Segment convert(java.lang.Long id) {
+                return Segment.findSegment(id);
+            }
+        };
+    }
+    
+    public Converter<String, Segment> ApplicationConversionServiceFactoryBean.getStringToSegmentConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.String, nl.ica.ddoa.dda.routeplanner.domain.Segment>() {
+            public nl.ica.ddoa.dda.routeplanner.domain.Segment convert(String id) {
+                return getObject().convert(getObject().convert(id, Long.class), Segment.class);
+            }
+        };
+    }
     
     public Converter<Wegwerkzaamheid, String> ApplicationConversionServiceFactoryBean.getWegwerkzaamheidToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<nl.ica.ddoa.dda.routeplanner.domain.Wegwerkzaamheid, java.lang.String>() {
@@ -38,6 +63,9 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     }
     
     public void ApplicationConversionServiceFactoryBean.installLabelConverters(FormatterRegistry registry) {
+        registry.addConverter(getSegmentToStringConverter());
+        registry.addConverter(getIdToSegmentConverter());
+        registry.addConverter(getStringToSegmentConverter());
         registry.addConverter(getWegwerkzaamheidToStringConverter());
         registry.addConverter(getIdToWegwerkzaamheidConverter());
         registry.addConverter(getStringToWegwerkzaamheidConverter());

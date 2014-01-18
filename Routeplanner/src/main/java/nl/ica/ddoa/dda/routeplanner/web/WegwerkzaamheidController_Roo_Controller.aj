@@ -6,6 +6,7 @@ package nl.ica.ddoa.dda.routeplanner.web;
 import java.io.UnsupportedEncodingException;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
+import nl.ica.ddoa.dda.routeplanner.domain.Segment;
 import nl.ica.ddoa.dda.routeplanner.domain.Wegwerkzaamheid;
 import nl.ica.ddoa.dda.routeplanner.web.WegwerkzaamheidController;
 import org.springframework.ui.Model;
@@ -94,6 +95,7 @@ privileged aspect WegwerkzaamheidController_Roo_Controller {
     void WegwerkzaamheidController.populateEditForm(Model uiModel, Wegwerkzaamheid wegwerkzaamheid) {
         uiModel.addAttribute("wegwerkzaamheid", wegwerkzaamheid);
         addDateTimeFormatPatterns(uiModel);
+        uiModel.addAttribute("segments", Segment.findAllSegments());
     }
     
     String WegwerkzaamheidController.encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {

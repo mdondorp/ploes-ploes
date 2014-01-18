@@ -13,4 +13,7 @@
 <definition extends="default" name="wegwerkzaamheids/update">
         <put-attribute name="body" value="/WEB-INF/views/wegwerkzaamheids/update.jspx"/>
     </definition>
+<definition extends="default" name="wegwerkzaamheids/findWegwerkzaamheidsBySegmenten">
+        <put-attribute name="body" value="/WEB-INF/views/wegwerkzaamheids/findWegwerkzaamheidsBySegmenten.jspx"/>
+    </definition>
 </tiles-definitions>

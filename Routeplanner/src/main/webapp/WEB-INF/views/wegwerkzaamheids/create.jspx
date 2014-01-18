@@ -6,6 +6,7 @@
         <field:input field="omschrijving" id="c_nl_ica_ddoa_dda_routeplanner_domain_Wegwerkzaamheid_omschrijving" z="n3bZYGu9d5j3u+jv9+LezjHH5lE="/>
         <field:input field="vertraging" id="c_nl_ica_ddoa_dda_routeplanner_domain_Wegwerkzaamheid_vertraging" z="nXxXrp1l7w9ITcm7hQLttr1pYlk="/>
         <field:checkbox field="afsluiting" id="c_nl_ica_ddoa_dda_routeplanner_domain_Wegwerkzaamheid_afsluiting" z="qbMxJYfE781+kiRcWpwWTtH7O90="/>
+        <field:select field="segmenten" id="c_nl_ica_ddoa_dda_routeplanner_domain_Wegwerkzaamheid_segmenten" itemValue="id" items="${segments}" multiple="true" path="/segments" z="QfavN5UcwGcSuB0uP2TEG9kGeXw="/>
         <field:datetime dateTimePattern="${wegwerkzaamheid_vandatum_date_format}" field="vanDatum" id="c_nl_ica_ddoa_dda_routeplanner_domain_Wegwerkzaamheid_vanDatum" z="J3iykELD883vHwtVqibwzTVESgM="/>
         <field:datetime dateTimePattern="${wegwerkzaamheid_totdatum_date_format}" field="totDatum" id="c_nl_ica_ddoa_dda_routeplanner_domain_Wegwerkzaamheid_totDatum" z="G0IzjnMzOkTcYtQLVBOGRJbfkDo="/>
     </form:create>

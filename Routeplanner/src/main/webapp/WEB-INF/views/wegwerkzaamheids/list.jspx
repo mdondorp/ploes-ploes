@@ -7,8 +7,9 @@
             <table:column id="c_nl_ica_ddoa_dda_routeplanner_domain_Wegwerkzaamheid_omschrijving" property="omschrijving" z="n2ApIcxa/2exmrta8KzKK9Gwmc8="/>
             <table:column id="c_nl_ica_ddoa_dda_routeplanner_domain_Wegwerkzaamheid_vertraging" property="vertraging" z="T5fzcfPw2mfq6kQcww1x1NOwPHQ="/>
             <table:column id="c_nl_ica_ddoa_dda_routeplanner_domain_Wegwerkzaamheid_afsluiting" property="afsluiting" z="xCE70fd//ArWWyw7CouJkdIlCBg="/>
-            <table:column calendar="true" dateTimePattern="${wegwerkzaamheid_vandatum_date_format}" id="c_nl_ica_ddoa_dda_routeplanner_domain_Wegwerkzaamheid_vanDatum" property="vanDatum" z="d6jg0HAeljLsWz2cNvKdCbbA07I="/>
-            <table:column calendar="true" dateTimePattern="${wegwerkzaamheid_totdatum_date_format}" id="c_nl_ica_ddoa_dda_routeplanner_domain_Wegwerkzaamheid_totDatum" property="totDatum" z="hjs1LAJldKk0bIA2PwaNO0iOmcw="/>
+            <table:column id="c_nl_ica_ddoa_dda_routeplanner_domain_Wegwerkzaamheid_segmenten" property="segmenten" z="eGD40P/Lnkb3dHga2OW27z7u1Xk="/>
+            <table:column date="true" dateTimePattern="${wegwerkzaamheid_vandatum_date_format}" id="c_nl_ica_ddoa_dda_routeplanner_domain_Wegwerkzaamheid_vanDatum" property="vanDatum" z="kyTpa6CZPeKFqy5q9TRDuAcRSyQ="/>
+            <table:column date="true" dateTimePattern="${wegwerkzaamheid_totdatum_date_format}" id="c_nl_ica_ddoa_dda_routeplanner_domain_Wegwerkzaamheid_totDatum" property="totDatum" z="QeruqEQq9BR3Cl7sl/T8w30Rf2E="/>
         </table:table>
     </page:list>
 </div>

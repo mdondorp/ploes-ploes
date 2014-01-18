@@ -3,7 +3,9 @@
 
 package nl.ica.ddoa.dda.routeplanner.domain;
 
-import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
+import nl.ica.ddoa.dda.routeplanner.domain.Segment;
 import nl.ica.ddoa.dda.routeplanner.domain.Wegwerkzaamheid;
 
 privileged aspect Wegwerkzaamheid_Roo_JavaBean {
@@ -32,19 +34,27 @@ privileged aspect Wegwerkzaamheid_Roo_JavaBean {
         this.afsluiting = afsluiting;
     }
     
-    public Calendar Wegwerkzaamheid.getVanDatum() {
+    public List<Segment> Wegwerkzaamheid.getSegmenten() {
+        return this.segmenten;
+    }
+    
+    public void Wegwerkzaamheid.setSegmenten(List<Segment> segmenten) {
+        this.segmenten = segmenten;
+    }
+    
+    public Date Wegwerkzaamheid.getVanDatum() {
         return this.vanDatum;
     }
     
-    public void Wegwerkzaamheid.setVanDatum(Calendar vanDatum) {
+    public void Wegwerkzaamheid.setVanDatum(Date vanDatum) {
         this.vanDatum = vanDatum;
     }
     
-    public Calendar Wegwerkzaamheid.getTotDatum() {
+    public Date Wegwerkzaamheid.getTotDatum() {
         return this.totDatum;
     }
     
-    public void Wegwerkzaamheid.setTotDatum(Calendar totDatum) {
+    public void Wegwerkzaamheid.setTotDatum(Date totDatum) {
         this.totDatum = totDatum;
     }
     
