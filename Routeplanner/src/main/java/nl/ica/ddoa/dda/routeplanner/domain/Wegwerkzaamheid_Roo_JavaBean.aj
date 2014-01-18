@@ -4,6 +4,8 @@
 package nl.ica.ddoa.dda.routeplanner.domain;
 
 import java.util.Calendar;
+import java.util.List;
+import nl.ica.ddoa.dda.routeplanner.domain.Segment;
 import nl.ica.ddoa.dda.routeplanner.domain.Wegwerkzaamheid;
 
 privileged aspect Wegwerkzaamheid_Roo_JavaBean {
@@ -46,6 +48,14 @@ privileged aspect Wegwerkzaamheid_Roo_JavaBean {
     
     public void Wegwerkzaamheid.setTotDatum(Calendar totDatum) {
         this.totDatum = totDatum;
+    }
+    
+    public List<Segment> Wegwerkzaamheid.getSegmenten() {
+        return this.segmenten;
+    }
+    
+    public void Wegwerkzaamheid.setSegmenten(List<Segment> segmenten) {
+        this.segmenten = segmenten;
     }
     
 }

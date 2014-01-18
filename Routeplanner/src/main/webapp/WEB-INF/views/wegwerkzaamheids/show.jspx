@@ -8,5 +8,6 @@
         <field:display field="afsluiting" id="s_nl_ica_ddoa_dda_routeplanner_domain_Wegwerkzaamheid_afsluiting" object="${wegwerkzaamheid}" z="pSNrFHIsBj6i8tIrdoT+FCWi4CU="/>
         <field:display calendar="true" dateTimePattern="${wegwerkzaamheid_vandatum_date_format}" field="vanDatum" id="s_nl_ica_ddoa_dda_routeplanner_domain_Wegwerkzaamheid_vanDatum" object="${wegwerkzaamheid}" z="1opmaxFlPDMSIEr+fPWZSij5nyw="/>
         <field:display calendar="true" dateTimePattern="${wegwerkzaamheid_totdatum_date_format}" field="totDatum" id="s_nl_ica_ddoa_dda_routeplanner_domain_Wegwerkzaamheid_totDatum" object="${wegwerkzaamheid}" z="rrAWkqaNM4yxNtqeZ9/9qxLqkIE="/>
+        <field:display field="segmenten" id="s_nl_ica_ddoa_dda_routeplanner_domain_Wegwerkzaamheid_segmenten" object="${wegwerkzaamheid}" z="QZ2WlFNAlBEd+D2O6wdraTjh2LI="/>
     </page:show>
 </div>

@@ -9,6 +9,7 @@
             <table:column id="c_nl_ica_ddoa_dda_routeplanner_domain_Wegwerkzaamheid_afsluiting" property="afsluiting" z="xCE70fd//ArWWyw7CouJkdIlCBg="/>
             <table:column calendar="true" dateTimePattern="${wegwerkzaamheid_vandatum_date_format}" id="c_nl_ica_ddoa_dda_routeplanner_domain_Wegwerkzaamheid_vanDatum" property="vanDatum" z="d6jg0HAeljLsWz2cNvKdCbbA07I="/>
             <table:column calendar="true" dateTimePattern="${wegwerkzaamheid_totdatum_date_format}" id="c_nl_ica_ddoa_dda_routeplanner_domain_Wegwerkzaamheid_totDatum" property="totDatum" z="hjs1LAJldKk0bIA2PwaNO0iOmcw="/>
+            <table:column id="c_nl_ica_ddoa_dda_routeplanner_domain_Wegwerkzaamheid_segmenten" property="segmenten" z="eGD40P/Lnkb3dHga2OW27z7u1Xk="/>
         </table:table>
     </page:list>
 </div>

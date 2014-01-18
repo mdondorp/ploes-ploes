@@ -6,6 +6,13 @@
         <menu:category id="c_wegwerkzaamheid" z="151dLcG0HztskyS6ABHTsHGtpIs=">
             <menu:item id="i_wegwerkzaamheid_new" messageCode="global_menu_new" url="/wegwerkzaamheids?form" z="NU9c+lcEfXdYAO4Usx2hQvqiT6k="/>
             <menu:item id="i_wegwerkzaamheid_list" messageCode="global_menu_list" url="/wegwerkzaamheids?page=1&amp;size=${empty param.size ? 10 : param.size}" z="LApZ4mKKBKr47bH8eYPEDsuwz20="/>
+            <menu:item id="fi_wegwerkzaamheid_segmenten" messageCode="global_menu_find" url="/wegwerkzaamheids?find=BySegmenten&amp;form" z="AXJ83ajy0DyIbNEIZCSNGo2WCvY="/>
+        </menu:category>
+        <menu:category id="c_segment" z="kPNA/OcjA/lwfK1QOyUfRRVCxAA=">
+            <menu:item id="i_segment_new" messageCode="global_menu_new" url="/segments?form" z="K0G6/tDNQ/AaCk80sUSzUeTEuDA="/>
+            <menu:item id="i_segment_list" messageCode="global_menu_list" url="/segments?page=1&amp;size=${empty param.size ? 10 : param.size}" z="fPaI4+NtwXjd9wXb+oZFHw/k0as="/>
+            <menu:item id="fi_segment_beginafslagoreindafslag" messageCode="global_menu_find" url="/segments?find=ByBeginAfslagOrEindAfslag&amp;form" z="Q8oTsIVvh5eKStDDcYpQicJU6UE="/>
+            <menu:item id="fi_segment_beginpuntandeindpunt" messageCode="global_menu_find" url="/segments?find=ByBeginPuntAndEindPunt&amp;form" z="qTv6t0XPCxjzLgHkxes8g0giEQM="/>
         </menu:category>
     </menu:menu>
 </div>
