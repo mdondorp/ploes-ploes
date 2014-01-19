@@ -85,3 +85,14 @@ field date --fieldName totDatum --type java.util.Date --dateTimeFormatPattern "y
 json all --deepSerialize
 web mvc json all
 
+web mvc all --package ~.web
+
+focus --class ~.domain.Wegwerkzaamheid
+
+// [failed] field date --fieldName vanDatum --type java.util.Date --dateTimeFormatPattern "yyyy-MM-dd HH:mm:ss"
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log closed at 2014-01-19 11:51:22
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2014-01-19 11:52:59
+focus --class ~.domain.Wegwerkzaamheid
+
+field date --fieldName vanDatum --type java.util.Date --dateTimeFormatPattern "yyyy-MM-dd HH:mm:ss"
+field date --fieldName totDatum --type java.util.Date --dateTimeFormatPattern "yyyy-MM-dd HH:mm:ss"

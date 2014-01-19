@@ -88,8 +88,8 @@ privileged aspect WegwerkzaamheidController_Roo_Controller {
     }
     
     void WegwerkzaamheidController.addDateTimeFormatPatterns(Model uiModel) {
-        uiModel.addAttribute("wegwerkzaamheid_vandatum_date_format", "yyyy-MM-dd hh:mm:ss");
-        uiModel.addAttribute("wegwerkzaamheid_totdatum_date_format", "yyyy-MM-dd hh:mm:ss");
+        uiModel.addAttribute("wegwerkzaamheid_vandatum_date_format", "yyyy-MM-dd HH:mm:ss");
+        uiModel.addAttribute("wegwerkzaamheid_totdatum_date_format", "yyyy-MM-dd HH:mm:ss");
     }
     
     void WegwerkzaamheidController.populateEditForm(Model uiModel, Wegwerkzaamheid wegwerkzaamheid) {
